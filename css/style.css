@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  width: 100vw;
+  height: 100%;
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: hsl(228, 12%, 44%);
+  background-color: hsl(0, 0%, 100%);
+}
+h1 {
+  color: hsl(230, 17%, 14%);
+}
+h3 {
+  width: 90%;
+  margin: 0 auto;
+}
+.up {
+  width: 100%;
+  display: grid;
+  /* background-color: hsl(228, 12%, 44%); */
+}
+.container {
+  display: grid;
+  gap: 2rem;
+}
+header {
+  width: 100%;
+  height: 15rem;
+  padding: 2rem 0;
+}
+header::before {
+  content: "";
+  background-color: hsl(225, 100%, 98%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20rem;
+  z-index: -3;
+  border-bottom-left-radius: 2.5rem;
+  border-bottom-right-radius: 2.5rem;
+}
+.content {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.content h1 {
+  margin-bottom: 0.5rem;
+}
+.darkmode {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.button {
+  width: 4rem;
+  height: 2rem;
+  background-color: hsl(230, 22%, 74%);
+  border-radius: 10rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "on off";
+  align-items: center;
+  justify-items: center;
+}
+.button:hover {
+  background-color: hsl(210, 78%, 56%);
+  cursor: pointer;
+}
+.btn {
+  grid-area: off;
+  width: 90%;
+  height: 1.8rem;
+  background-color: hsl(227, 47%, 96%);
+  border-radius: 10rem;
+}
+.on {
+  grid-area: on;
+}
+.dark-active {
+  background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+.users {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  /* grid-template-rows: 20rem; */
+  gap: 3rem;
+}
+.user {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+  gap: 1rem;
+  background-color: hsl(227, 47%, 96%);
+  padding: 5rem 3rem;
+  border-radius: 0.5rem;
+}
+.user .top {
+  /* width: 50%; */
+  display: flex;
+  /* justify-content: space-between; */
+}
+.user .top .name {
+  margin-left: 1rem;
+  font-weight: 700;
+}
+.number {
+  font-size: 4rem;
+  font-weight: 700;
+  color: hsl(230, 17%, 14%);
+}
+.user .text {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+.user:first-child {
+  border-top: 0.5rem solid hsl(208, 92%, 53%);
+}
+.user:nth-child(2) {
+  border-top: 0.5rem solid hsl(203, 89%, 53%);
+}
+.user:nth-child(3) {
+  border-top: 0.5rem solid transparent;
+  border-image: linear-gradient(
+    to right,
+    hsl(37, 97%, 70%),
+    hsl(329, 70%, 58%)
+  );
+  border-image-slice: 1;
+  border-radius: 0.5rem;
+}
+
+.user:last-child {
+  border-top: 0.5rem solid hsl(348, 97%, 39%);
+}
+.socials {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+.social {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: hsl(227, 47%, 96%);
+}
+.social .top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.social .bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.total {
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsl(230, 17%, 14%);
+}
+.bottom-text {
+  display: flex;
+  align-items: center;
+}
+.text-green {
+  color: hsl(163, 72%, 41%);
+}
+.text-red {
+  color: hsl(356, 69%, 56%);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@media (min-width: 580px) {
+  .users {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .socials {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, minmax(10rem, 1fr));
+  }
+}
+@media (min-width: 800px) {
+  .container {
+    max-width: 1440px;
+  }
+  .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .darkmode {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0;
+  }
+  .button {
+    margin-left: 2rem;
+  }
+  .users {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+  }
+  .socials {
+    width: 90%;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, minmax(10rem, 1fr));
+    gap: 3rem;
+  }
+  .social {
+    width: 100%;
+  }
+}

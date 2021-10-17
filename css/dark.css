@@ -1,0 +1,29 @@
+body {
+  background-color: hsl(230, 17%, 14%);
+  color: hsl(228, 34%, 66%);
+}
+h1 {
+  color: hsl(0, 0%, 100%);
+}
+header::before {
+  background-color: hsl(232, 19%, 15%);
+}
+.btn {
+  background-color: hsl(227, 47%, 96%);
+}
+.user {
+  background-color: hsl(228, 28%, 20%);
+}
+
+.number {
+  color: hsl(0, 0%, 100%);
+}
+.social {
+  background-color: hsl(228, 28%, 20%);
+}
+.total {
+  color: hsl(0, 0%, 100%);
+}
+.attribution a {
+  color: hsl(0, 0%, 100%);
+}
